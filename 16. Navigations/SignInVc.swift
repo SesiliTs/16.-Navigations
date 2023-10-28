@@ -141,6 +141,10 @@ class SignInVC: UIViewController {
         fbImage.image = .FB
         linkedinImage.image = .linkedin
         
+        googleImage.contentMode = .scaleAspectFit
+        fbImage.contentMode = .scaleAspectFit
+        linkedinImage.contentMode = .scaleAspectFit
+        
         logoStack.addArrangedSubview(googleImage)
         logoStack.addArrangedSubview(fbImage)
         logoStack.addArrangedSubview(linkedinImage)
@@ -211,9 +215,9 @@ class SignInVC: UIViewController {
     
     func logoToStack() {
         logoStack.axis = .horizontal
-        logoStack.alignment = .center
+        logoStack.alignment = .fill
         logoStack.distribution = .equalSpacing
-        logoStack.spacing = 11
+        logoStack.spacing = 0
     }
     
     let unitedStack = UIStackView()
